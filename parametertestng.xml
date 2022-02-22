@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="org.buffalocart.listeners.TestListeners"/>
+    </listeners>
+    <test  name="MyDemoWebShop Functional Test">
+    <parameter name="browser" value="Chrome"/>
+    <test verbose="2" preserve-order="true" name="C:/Users/pc/IdeaProjects/buffalocart">
+        <classes>
+            <class name="com.buffalocart.testscripts.HomePageTest">
+                <methods>
+                    <include name="verify_login_page_title"/>
+                </methods>
+            </class>
+            <class name="com.buffalocart.testscripts.LoginPageTest">
+                <methods>
+                    <include name="Verify_user_login_with_valid_user_credentials"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
