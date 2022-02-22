@@ -46,16 +46,16 @@ public class Base {
 
     public void testIntialise(String browser,String url) {
         if (browser.equals("Chrome")) {
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\pc\\IdeaProjects\\DemoWorkShop\\src\\main\\resources\\seleniumDriver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "C:\\bhavana\\seleniumDriver\\chromedriver.exe");
             driver = new  ChromeDriver();
         } else if (browser.equals("Firefox")) {
-            System.setProperty("webdriver.gecko.driver", "C:\\Users\\pc\\IdeaProjects\\DemoWorkShop\\src\\main\\resources\\seleniumDriver\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", "C:\\Users\\pc\\IdeaProjects\\buffalocart\\src\\main\\resources\\seleniumDriver\\geckodriver.exe");
             driver = new EdgeDriver();
         } else if (browser.equals("Edge")) {
-            System.setProperty("webdriver.edge.driver", "C:\\Users\\pc\\IdeaProjects\\DemoWorkShop\\src\\main\\resources\\seleniumDriver\\msedgedriver.exe");
+            System.setProperty("webdriver.edge.driver", "C:\\Users\\pc\\IdeaProjects\\buffalocart\\src\\main\\resources\\seleniumDriver\\msedgedriver.exe");
             driver = new FirefoxDriver();
         } else if (browser.equals("ie")) {
-            System.setProperty("webdriver.ie.driver", "C:\\Users\\pc\\IdeaProjects\\DemoWorkShop\\src\\main\\resources\\seleniumDriver\\IEDriverServer.exe");
+            System.setProperty("webdriver.ie.driver", "C:\\Users\\pc\\IdeaProjects\\buffalocart\\src\\main\\resources\\seleniumDriver\\IEDriverServer.exe");
             driver = new InternetExplorerDriver();
         } else {
             try {

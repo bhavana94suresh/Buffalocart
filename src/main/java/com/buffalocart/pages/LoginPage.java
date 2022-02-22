@@ -18,6 +18,9 @@ public class LoginPage extends TestHelperUtility {
 
     /*** page elements **/
 
+    private final String _pageTitle="//h1[@class='text-center page-header']";
+    @FindBy(xpath =_pageTitle ) WebElement pageTitle;
+
     private final String _userName = "username";
     @FindBy(id = _userName)
     private WebElement username;
@@ -36,6 +39,9 @@ public class LoginPage extends TestHelperUtility {
 
 
     /**user action methods**/
+
+    public String getLoginPagetitle(){
+         return page.getElementText(pageTitle);  }
 
     public void enterUserName(String uname){
         page.enterText(username,uname);
