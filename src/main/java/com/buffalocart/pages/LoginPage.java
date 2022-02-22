@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends TestHelperUtility {
-    WebDriver driver;
+     public  WebDriver driver;
 
     /**page Constructor**/
     public LoginPage(WebDriver driver)

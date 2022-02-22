@@ -42,8 +42,7 @@ public class ExcelUtility {
         return excelRows;
     }
 
-    public  List<List<String>> excelDataReader(String sheetName) {
-
+    public  List<List<String>> excelDataReader(String sheetName)  {
         DataFormatter formatter = new DataFormatter();
         try {
             f = new FileInputStream(System.getProperty("user.dir") + Constants.EXCEL_PATH);
@@ -70,5 +69,4 @@ public class ExcelUtility {
         }
         return excelRows;
     }
-
 }

@@ -20,10 +20,10 @@ LoginPage login;
     @Test(priority = 1,description = "TC_001_Verification of user login page title")
 
     public void verify_login_page_title(){
-        extentTest.get().assignCategory("Smoke");
+     //extentTest.get().assignCategory("Smoke");
         login = new LoginPage(driver);
-        List<List<String>> data=excel.excelDataReader("LoginPage");
-        String expectedTitle= data.get(1).get(0);
+        List<List<String>> data=excel.excelDataReader("loginPage");
+        String expectedTitle= data.get(3).get(0);
         String actualTitle= login.getLoginPagetitle();
         extentTest.get().log(Status.PASS, "Login page title recieved");
         Assert.assertEquals(actualTitle,expectedTitle,"ERROR ::Invalid Title");

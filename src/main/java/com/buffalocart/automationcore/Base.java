@@ -26,7 +26,7 @@ import java.time.Duration;
 import java.util.Properties;
 
 public class Base {
-    public WebDriver driver;
+    public  WebDriver driver;
     public Properties prop;
     FileInputStream fs;
     public Base()  {
@@ -47,7 +47,7 @@ public class Base {
     public void testIntialise(String browser,String url) {
         if (browser.equals("Chrome")) {
             System.setProperty("webdriver.chrome.driver", "C:\\bhavana\\seleniumDriver\\chromedriver.exe");
-            driver = new  ChromeDriver();
+            driver = new ChromeDriver();
         } else if (browser.equals("Firefox")) {
             System.setProperty("webdriver.gecko.driver", "C:\\Users\\pc\\IdeaProjects\\buffalocart\\src\\main\\resources\\seleniumDriver\\geckodriver.exe");
             driver = new EdgeDriver();

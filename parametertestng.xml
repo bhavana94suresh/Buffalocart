@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test  name="MyDemoWebShop Functional Test">
+    <listeners>
+        <listener class-name="com.buffalocart.listeners.TestListeners"/>
+    </listeners>
+    <test  name="buffalocart Functional Test">
     <parameter name="browser" value="Chrome"/>
         <classes>
             <class name="com.buffalocart.testscripts.HomePageTest">
