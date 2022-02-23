@@ -19,29 +19,31 @@ public class LoginPage extends TestHelperUtility {
     /*** page elements **/
 
     private final String _pageTitle="//h1[@class='text-center page-header']";
-    @FindBy(xpath =_pageTitle ) WebElement pageTitle;
+    @FindBy(xpath =_pageTitle ) private WebElement pageTitle;
 
     private final String _userName = "username";
-    @FindBy(id = _userName)
-    private WebElement username;
+    @FindBy(id = _userName) private WebElement username;
 
     private final String _password = "password";
-    @FindBy(id = _password)
-    private WebElement password;
+    @FindBy(id = _password) private WebElement password;
 
     private final String _rememberCheckbox = "//input[@name='remember']";
-    @FindBy(xpath = _rememberCheckbox)
-    private WebElement rememberCheckbox;
+    @FindBy(xpath = _rememberCheckbox) private WebElement rememberCheckbox;
 
     private final String _login = "//button[@type='submit']";
-    @FindBy(xpath = _login)
-    private WebElement login;
+    @FindBy(xpath = _login) private WebElement login;
+
+    private final String _errorMessage="//span[@class='help-block']";
+    @FindBy(xpath =_errorMessage) private WebElement errorMessage;
+
+    private final String _forgotPassword="//a[@class='btn btn-link']";
+    @FindBy(xpath = _forgotPassword) private WebElement forgotPassword;
 
 
     /**user action methods**/
 
     public String getLoginPagetitle(){
-         return page.getElementText(pageTitle);  }
+         return page.getPageTitleValue(driver);  }
 
     public void enterUserName(String uname){
         page.enterText(username,uname);
@@ -51,8 +53,23 @@ public class LoginPage extends TestHelperUtility {
         page.enterText(password,pwrd);
     }
 
-    public HomePage clickOnLoginButton(){
+        public HomePage clickOnLoginButton(){
         page.clickOnElement(login);
         return new HomePage(driver);
     }
+
+    public void clickOnRememberMeCheckBox(){
+        page.clickOnElement(rememberCheckbox);
+    }
+    public boolean rememberMeCheckBoxIsSelected(){
+        return page.isSelected(rememberCheckbox);
+    }
+    public String getErrorMessage(){
+        return   page.getElementText(errorMessage);
+    }
+    public ResetPage clickOnForgotPassword(){
+        page.clickOnElement(forgotPassword);
+        return new ResetPage(driver);
+    }
+
 }

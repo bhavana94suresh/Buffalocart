@@ -19,7 +19,7 @@ public class ExcelUtility {
     public static XSSFSheet sh;
     public static FileInputStream f;
 
-    public List<String> readDataFromExcel(String sheetName)  {
+    public List<String> readDataFromExcel(String sheetName) {
         DataFormatter formatter = new DataFormatter();
         try {
             f = new FileInputStream(System.getProperty("user.dir") + Constants.EXCEL_PATH);
@@ -34,7 +34,7 @@ public class ExcelUtility {
         sh = wb.getSheet(sheetName);
         ArrayList<String> excelRows = new ArrayList<String>();
 
-        for (Row r : sh) {
+        for(Row r : sh) {
             for (Cell c : r) {
                 excelRows.add(formatter.formatCellValue(c));
             }

@@ -17,18 +17,5 @@ public class HomePageTest extends Base {
     ExcelUtility excel=new ExcelUtility();
     ThreadLocal<ExtentTest> extentTest = TestListeners.getTestInstance();;
 
-    @Test(priority = 1,description = "TC_001_Verification of home page title")
 
-    public void verify_login_page_title(){
-        extentTest.get().assignCategory("Smoke");
-        home=new HomePage(driver);
-        List<String> data=excel.readDataFromExcel("loginPage");
-        String expectedHomePageTitle=data.get(1);
-       // String actualHomePageTitle=home.getHomePageTitle();
-      //  extentTest.get().log(Status.PASS, "Login page title recieved");
-       // Assert.assertEquals(actualHomePageTitle,expectedHomePageTitle,"ERROR::invalid HomePage Title");
-       // extentTest.get().log(Status.PASS, "Expected title is mached with actual home page title");
-
-
-    }
 }

@@ -38,6 +38,18 @@ public class PageUtility {
         return element.getSize();
     }
 
+    public boolean isSelected(WebElement element) {
+        return element.isSelected();
+    }
+
+    public boolean isDisplayed(WebElement element) {
+        return element.isDisplayed();
+    }
+
+    public boolean isEnabled(WebElement element) {
+        return element.isEnabled();
+    }
+
         public void selectDropDownByText(WebElement element, String value) {
         Select select = new Select(element);
         select.selectByVisibleText(value);
