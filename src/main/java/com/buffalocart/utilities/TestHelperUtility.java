@@ -7,4 +7,5 @@ public class TestHelperUtility {
     public WaitUtility wait=new WaitUtility();
     public   RobotUtility robot=new RobotUtility();
     public RandomDataUtility randomdata=new RandomDataUtility();
+    public DateUtility date=new DateUtility();
 }

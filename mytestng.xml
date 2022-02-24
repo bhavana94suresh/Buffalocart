@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/pc/IdeaProjects/buffalocart">
+    <listeners>
+        <listener class-name="com.buffalocart.listeners.TestListeners"></listener>
+    </listeners>
+    <test  name="My buffalocart Functional Test">
         <classes>
             <class name="com.buffalocart.testscripts.HomePageTest">
                 <methods>
-                    <include name="verify_login_page_title"/>
+                    <exclude name="verify_login_page_title"></exclude>
+                    <exclude name="verify_Home_Page_Title"></exclude>
+                    <exclude name="verify_date_displayed_in_home_page"></exclude>
+                    <include name="verify_Whether_User_Is_Navigating_To_Login_Page_By_Clicking_On_Sign_Out_Button"></include>
                 </methods>
             </class>
             <class name="com.buffalocart.testscripts.LoginPageTest">
                 <methods>
-                    <include name="Verify_user_login_with_valid_user_credentials"/>
+                    <exclude name="Verify_user_login_with_valid_user_credentials"/>
+                    <exclude name="verify_User_Login_With_InvalidUser_Credentials"></exclude>
+                    <exclude name="verify_Whether_User_Able_To_Click_On_RemememberMe_CheckBox"></exclude>
+                    <exclude name="verify_error_msg_displayed_on_Reset_password_with_invalid_email_Id"></exclude>
+                </methods>
+            </class>
+            <class name="com.buffalocart.testscripts.SignOutTest">
+                <methods>
+                    <include name="verify_error_msg_displayed_on_Reset_password_with_invalid_email_Id"></include>
                 </methods>
             </class>
         </classes>
